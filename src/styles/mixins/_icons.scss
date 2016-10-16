@@ -1,0 +1,44 @@
+@mixin icon {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin icon-arrow-down {
+  @include icon;
+  content: "\f100";
+}
+
+@mixin icon-arrow-up {
+  @include icon;
+  content: "\f101"
+}
+
+@mixin icon-tv {
+  @include icon;
+  content: "\f105";
+}
+
+@mixin icon-phone {
+  @include icon;
+  content: "\f104";
+}
+
+@mixin icon-broadband {
+  @include icon;
+  content: "\f103";
+}
+
+@mixin icon-movie {
+  @include icon;
+  content: "\f102";
+}

@@ -1,0 +1,27 @@
+@import '../../styles/mixins/_breakpoints.scss';
+@import '../../styles/_colors.scss';
+
+.summary {
+  height: 16em;
+  padding: 0.5em 2em 2em;
+  background-color: $accent-blue-darker;
+  color: $main-white;
+
+  @media screen and (min-width: $large) {
+    margin: 0 -2em 2em -2em;
+  }
+
+  &--title {
+    font-size: 2em;
+    font-weight: 300;
+  }
+
+  &--row {
+    padding: 0 0 0.25em 0;
+    font-weight: 300;
+
+    &-attribute {
+      color: $accent-gray-lighter;
+    }
+  }
+}

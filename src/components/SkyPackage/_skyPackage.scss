@@ -1,0 +1,60 @@
+@import '../../styles/mixins/_icons.scss';
+@import '../../styles/mixins/_breakpoints.scss';
+@import '../../styles/_colors.scss';
+
+$icon-font-size: 6em;
+$icon-color: $accent-blue;
+
+.package {
+  list-style: none;
+  padding: 0;
+}
+
+
+.subscription {
+  position: relative;
+  padding: 2em 0.5em;
+
+  &--tv {
+    &:before {
+      @include icon-tv;
+      font-size: $icon-font-size;
+      color: $icon-color;
+    }
+  }
+
+  &--talk {
+    &:before {
+      @include icon-phone;
+      font-size: $icon-font-size;
+      color: $icon-color;
+    }
+  }
+
+  &--broadband {
+    &:before {
+      @include icon-broadband;
+      font-size: $icon-font-size;
+      color: $icon-color;
+    }
+  }
+
+  &--name, &--cost {
+    position: absolute;
+    left: 7.25em;
+    top: 3em;
+  }
+
+  &--cost {
+    top: 5em;
+  }
+
+  @media screen and (min-width: $medium) {
+    display: inline-block;
+    width: 50%;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 33.3333333%;
+  }
+}

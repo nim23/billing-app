@@ -1,0 +1,76 @@
+@import '../../styles/mixins/_icons.scss';
+@import '../../styles/mixins/_breakpoints.scss';
+@import '../../styles/_colors.scss';
+
+.panel {
+  margin: 0 0 2em;
+  background: $main-white;
+  color: $accent-black;
+
+  &:last-child {
+    margin-bottom: 0em;
+
+    @media screen and(min-width: $large) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &--title {
+    float: left;
+    padding: 0 0 0 1em;
+  }
+
+  &--subtitle {
+    float: right;
+    padding: 0 3em 0 0;
+  }
+
+  &--title, &--subtitle {
+    font-size: 1em;
+
+     @media screen and (min-width: $medium) {
+      font-size: 1.5em;
+    }
+  }
+
+  &--toggle {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+
+    &-open, &-closed {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+
+      @media screen and (min-width: $medium) {
+        right: 20px;
+        top: 25px;
+      }
+
+      &:before {
+        color: $accent-red;
+      }
+    }
+
+    &-open {
+      &:before {
+        @include icon-arrow-up;
+      }
+    }
+    
+    &-closed {
+      &:before {
+        @include icon-arrow-down;
+      }
+    }
+  }
+
+  &--content {
+    padding: 1em;
+
+    &-hidden {
+      display: none;
+    }
+  }
+}
